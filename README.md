@@ -19,11 +19,21 @@ jupyter serverextension enable --py jupyterlab_templates
 ```
 
 ## Adding templates
-install the server extension, and add the following to `jupyter_notebook_config.py`
+Install the server extension, and add the following to `jupyter_notebook_config.py`
 
 ```python3
 c.JupyterLabTemplates.template_dirs = ['list', 'of', 'template', 'directories']
 c.JupyterLabTemplates.include_default = True
+```
+
+### Finding/generating `jupyter_notebook_config.py`
+```bash
+jupyter --paths
+```
+Should show where the `.jupyter` folder is.
+`jupyter_notebook_config.py` should be inside this folder. If not, it can be generated with: 
+```bash
+jupyter notebook --generate-config
 ```
 
 ### Flags
