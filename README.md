@@ -27,11 +27,14 @@ c.JupyterLabTemplates.include_default = True
 ```
 
 ### Finding/generating `jupyter_notebook_config.py`
+Run this command: 
 ```bash
 jupyter --paths
 ```
-Should show where the `.jupyter` folder is.
-`jupyter_notebook_config.py` should be inside this folder. If not, it can be generated with: 
+
+The jupyter_notebook_config.py file should be inside the `.jupyter` folder.
+
+If not found, it can be generated with: 
 ```bash
 jupyter notebook --generate-config
 ```
